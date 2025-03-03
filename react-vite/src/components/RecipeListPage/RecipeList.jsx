@@ -6,6 +6,7 @@ const RecipeList = () => {
     const fetchRecipes = async () => {
         const res = await fetch("/api/recipes/search/pasta");  // Example query
         const data = await res.json();
+        console.log(data);
         setRecipes(data.results);  // Assuming API returns results in an array
     };
 
